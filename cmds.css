@@ -1,0 +1,102 @@
+
+header{
+	color: white;
+	background-color: black;
+	text-align: center;
+	font: tahoma;
+}
+
+
+
+#regform{
+	padding: 15px;
+	float: center;
+	font : tahoma;
+	background-color: yellow;
+}
+
+/* Index Page's CSS */
+#admdiv{
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	clear: none;
+	
+}
+
+#empdiv{
+	position: fixed;
+	top: 300px;
+	left: 450px;
+	clear: none;
+	
+}
+
+#indexheader{
+	
+	text-align: center;
+	background-color: #56E354;
+	color: #EDEDED ;
+}
+
+#empdiv p{
+	text-align: center;
+	font: bold Tahoma ;
+	background-color: yellow;
+	color: black;
+}
+
+#admdiv p{
+	font: bold Tahoma;
+	background-color: cyan;
+	color:  black;
+}
+
+#empregdiv{
+	font: solid  Tahoma ;
+	background-color: lightgreen;
+	text-align: center;
+}
+
+/* Employee Login page css */
+
+#login_bt{
+	font: bold Tahoma;
+}
+
+#login_emp{
+	background-color: lightyellow;
+}
+
+
+
+/* Admin Login page css */
+
+#login_admin{
+	background-color: lightgreen ;
+}
+
+
+/* Employee page css */
+#emp_page_view{
+	background-color: lightyellow;
+}
+
+
+#emp_page_update{
+	background-color: lightcyan;
+}
+
+#vcp{
+	text-align: left;
+	font: bold Tahoma;
+}
+
+h3{
+	background-color: lightgreen;
+	font-size: 15;
+	font: Tahoma;
+}
+
+/* Admin page css */
+
