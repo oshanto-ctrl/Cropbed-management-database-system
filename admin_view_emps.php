@@ -23,9 +23,16 @@ $result = $connection-> query($sql);
 echo "<h1>Employee Informations</h1>";
 
 if($result-> num_rows > 0){
+	echo "<th>Emp ID</th>"."---";
+	echo "<th>Username</th>"."---";
+	echo "<th>Password</th>"."---";
+	echo "<th>Adress</th>"."---";
+	echo "<th>Phone</th>" . "<br>";
+	echo "------------------------------------------------------------------";
+	echo "<br>";
 	while($row = $result->fetch_assoc()){
 		echo "<tr><td> " . $row['emp_id'] .
-		"	</td><td>". $row['emp_name'] ." </td><td>" . $row['emp_username']. "</td><td>". $row['emp_password'] . "</td> <td>" . $row['emp_address'] . "</td><td>". $row['phone'] ."</td></tr>";
+		"----</td><td>". $row['emp_name'] ."----</td><td>" . $row['emp_username']. "----</td><td>". $row['emp_password'] . "----</td> <td>" . $row['emp_address'] . "----</td><td>". $row['phone'] ."</td></tr>";
 			echo "<br>";
 	}
 	

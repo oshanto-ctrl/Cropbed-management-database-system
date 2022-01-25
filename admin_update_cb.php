@@ -17,19 +17,20 @@ if($connection){
 }
 echo "<br><br>";
 
+$sql = $sql = "UPDATE cropbed SET crop_name = '$_POST[crop_name]' , ph_level = $_POST[ph_level] WHERE bed_no = $_POST[bed_no] ";
 
-$sql = "DELETE FROM cropbed  WHERE cb_id = $_POST[cb_id]";
 
+// passing the update query
 echo "<br>";
 
 if($connection->query($sql) === TRUE){
-	echo "<h3>Crop Deleted Successfullly.</h3>";
+	echo "<h3>Crop Name Updated Successfullly.</h3>";
 
-	echo "<br>" . "<a href='admin_page.html'>Return to Admin page ? </a>";
+	echo "<br>" . "<a href='employee_page.php'>Return to employee page ? </a>";
 }else{
 	echo "Error: " . $sql . "<br>" . $connection->error;
-	echo "<br>" . "<a href='admin_page.html'>Return to Admin page ? </a>";
+	echo "<br>" . "<a href='employee_page.php'>Return to employee page ? </a>";
 }
-//close connection
-$connection->close();
+
+// --- ends here ---
 ?>

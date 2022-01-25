@@ -17,8 +17,11 @@ if($connection){
 }
 echo "<br><br>";
 
+echo "<br><br>";
 
-$sql = "DELETE FROM cropbed  WHERE cb_id = $_POST[cb_id]";
+// Updating Query
+
+$sql = "UPDATE greenhouse SET fan_status = $_POST[fan_status], light_status = $_POST[light_status], water_pump = $_POST[water_pump] WHERE gh_no = $_POST[gh_no]"; 
 
 echo "<br>";
 
@@ -30,6 +33,6 @@ if($connection->query($sql) === TRUE){
 	echo "Error: " . $sql . "<br>" . $connection->error;
 	echo "<br>" . "<a href='admin_page.html'>Return to Admin page ? </a>";
 }
-//close connection
+
 $connection->close();
 ?>

@@ -28,11 +28,12 @@ echo "<br>";
 if($connection->query($sql) === TRUE){
 	echo "<h3>Crop Name Updated Successfullly.</h3>";
 
-	echo "<br>" . "<a href='employee_page.php'>Return to employee page ? </a>";
+	echo "<br>" . "<a href='employee_page.html'>Return to employee page ? </a>";
 }else{
 	echo "Error: " . $sql . "<br>" . $connection->error;
-	echo "<br>" . "<a href='employee_page.php'>Return to employee page ? </a>";
+	echo "<br>" . "<a href='employee_page.html'>Return to employee page ? </a>";
 }
 
+$connection->close();
 // ends here 
 ?>

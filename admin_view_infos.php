@@ -25,11 +25,18 @@ $result = $connection-> query($sql);
 echo "<h1>CROP BED INFORMATIONS</h1>";
 
 if($result-> num_rows > 0){
+
+			echo "<th>CB_ID</th>"."------<th>Bed_No</th>"."----<th>Crop Name</th>"."----<th>N Lvl</th>"."----<th>N Lvl</th>"."----<th>P Lvl</th>"."----<th>K Lvl</th>"."----<th>CB_TEMP</th>"."----<th>table_ID</th>";
+		echo "<br>";
+		
+		echo "___________________________________________________________________________________" . "<br>";
+
 	while($row = $result->fetch_assoc()){
-		echo "<tr><td> " . $row['cb_id'] .
-		"	</td><td>". $row['bed_no'] ." </td><td>" . $row['crop_name']. "	</td><td>". $row['ph_level']."	</td><td>". $row['n_level']. "	</td><td>" . $row['p_level'] . "	</td><td>" . $row['k_level'] . "	</td><td>".
-			$row['cb_temp']."	</td><td>"
-			. $row['t_id'] . "	</td></tr>";
+
+		echo "<tr><td>=>" . $row['cb_id'] .
+		"-------</td><td>". $row['bed_no'] ."----</td><td>" . $row['crop_name']. "----</td><td>". $row['ph_level']."----</td><td>". $row['n_level']. "----</td><td>" . $row['p_level'] . "-----	</td><td>" . $row['k_level'] . "-----</td><td>".
+			$row['cb_temp']."-----</td><td>"
+			. $row['t_id'] . "</td></tr>";
 			echo "<br>";
 	}
 	
@@ -54,8 +61,10 @@ $result = $connection-> query($sql);
 echo "<h1>Green House Informations </h1>";
 
 if($result-> num_rows > 0){
+	echo "<th>GH_NO</th>" . "----<th>GH Name</th>----"."<th>CB_COUNT</th>----"."<th>Fan</th>----"."<th>Light----</th>"."<th>WPUMP</th>";
+	echo "<br>"."__________________________________________________________________________________"."<br>";
 	while($row = $result->fetch_assoc()){
-		echo "<tr><td> " . $row['gh_no'] . "</td><td>" . $row['gh_name'] . "</td><td>" . $row['cb_count'] . "</td><td>" . $row['fan_status'] . "</td><td>" . $row['light_status'] . "</td><td>" . $row['water_pump'] . "</td></tr>";
+		echo "<tr><td>=>" . $row['gh_no'] . "--------</td><td>" . $row['gh_name'] . "-------</td><td>" . $row['cb_count'] . "--------</td><td>" . $row['fan_status'] . "-------</td><td>" . $row['light_status'] . "-------</td><td>" . $row['water_pump'] . "</td></tr>";
 		echo "<br>";
 	}
 }else{

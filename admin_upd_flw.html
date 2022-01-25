@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Update components</title>
+	<link rel="stylesheet" type="text/css" href="cmds.css">
+</head>
+<body>
+<header>Update Greehouse Fan Light Water pump status</header>
+
+<h2>Current Status of greenhouse components</h2>
+<br/>
+<button><a href="admin_view_infos.php">Click here to view GreenHouse infos</a></button>
+<br/>
+<h3>Input 0 to OFF and 1 to ON for Updating status of components</h3>
+
+
+<form action="admin_upd_flw.php" method="post">
+	<p>Select Id of desired Green House : <input type="number" name="gh_no"></p>
+	<p>Update Fan Status : <input type="number" name="fan_status"></p>
+	<p>Update Light Status : <input type="number" name="light_status"></p>
+	<p>Update Water pump status : <input type="number" name="water_pump"></p>
+	<button type="submit">Update All</button>
+</form>
+</body>
+</html>
